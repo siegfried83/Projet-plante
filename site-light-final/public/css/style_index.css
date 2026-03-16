@@ -1,0 +1,100 @@
+ body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .welcome-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .welcome-section h1 {
+            color: #1a5d3a;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .welcome-section h1 i {
+            margin-right: 15px;
+        }
+        
+        .welcome-section p {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .welcome-presentation i {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .welcome-presentation p {
+            color: #131212;
+            font-size: 1.2em;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .dashboard-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .dashboard-card i {
+            font-size: 3em;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .dashboard-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.4em;
+        }
+        
+        .dashboard-card p {
+            color: #666;
+            margin: 0;
+            font-size: 0.95em;
+        }
+        
+        .card-cultures { border-top: 5px solid #27ae60; }
+        .card-cultures i { color: #27ae60; }
+        
+        .card-recettes { border-top: 5px solid #3498db; }
+        .card-recettes i { color: #3498db; }
+        
+        .card-equipe { border-top: 5px solid #9b59b6; }
+        .card-equipe i { color: #9b59b6; }
+
+        .card-weather { border-top: 5px solid #f39c12; }
+        .card-weather i { color: #f39c12; }

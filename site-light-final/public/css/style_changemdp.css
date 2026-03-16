@@ -1,0 +1,213 @@
+/* ============================================
+   STYLE CHANGEMDP PAGE - Changement mot de passe
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.changemdp-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.changemdp-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.changemdp-card h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.changemdp-card h1 i {
+    margin-right: 10px;
+    color: #74ebd5;
+}
+
+.message {
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-left: 4px solid;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #28a745;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.message i {
+    font-size: 1.2em;
+}
+
+.changemdp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.form-group input {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #74ebd5;
+    box-shadow: 0 0 0 3px rgba(116, 235, 213, 0.1);
+    background: rgba(116, 235, 213, 0.02);
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.btn-submit {
+    padding: 14px;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(116, 235, 213, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-submit i {
+    margin-right: 8px;
+}
+
+.requirements {
+    background: rgba(116, 235, 213, 0.1);
+    border: 1px solid rgba(116, 235, 213, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.requirements h3 {
+    color: #333;
+    font-size: 0.95em;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.requirements ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.requirements li {
+    color: #555;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.requirements i {
+    color: #28a745;
+    font-size: 1.1em;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #74ebd5;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s ease;
+}
+
+.back-link a:hover {
+    color: #ACB6E5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .changemdp-card {
+        padding: 30px 20px;
+    }
+
+    .changemdp-card h1 {
+        font-size: 1.5em;
+        margin-bottom: 25px;
+    }
+
+    .form-group input {
+        padding: 11px 12px;
+        font-size: 16px;
+    }
+
+    .btn-submit {
+        padding: 12px;
+        font-size: 1em;
+    }
+}

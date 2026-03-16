@@ -1,0 +1,143 @@
+/* ============================================
+   STYLE METEO PAGE - Météo détaillée
+   ============================================ */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    color: #333;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Widget Météo */
+.weather-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.weather-current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.weather-icon {
+    font-size: 5em;
+}
+
+.weather-temp {
+    font-size: 4em;
+    font-weight: 300;
+    color: #2c3e50;
+}
+
+.weather-temp sup {
+    font-size: 0.4em;
+    vertical-align: super;
+}
+
+.weather-details {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.weather-detail {
+    text-align: center;
+}
+
+.weather-detail i {
+    font-size: 1.5em;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.weather-detail .value {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.weather-detail .label {
+    font-size: 0.85em;
+    color: #7f8c8d;
+}
+
+.weather-description {
+    text-align: center;
+    font-size: 1.3em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.weather-forecast {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ecf0f1;
+}
+
+.forecast-day {
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 12px;
+    padding: 15px 20px;
+    text-align: center;
+    min-width: 80px;
+}
+
+.forecast-day .day-name {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.forecast-day i {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+}
+
+.forecast-day .temps {
+    font-size: 0.9em;
+}
+
+.forecast-day .temp-max {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.forecast-day .temp-min {
+    color: #3498db;
+}
+
+.weather-error {
+    text-align: center;
+    color: #e74c3c;
+    padding: 40px;
+}
+
+.weather-error i {
+    font-size: 3em;
+    margin-bottom: 15px;
+}

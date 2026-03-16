@@ -1,0 +1,15 @@
+[
+    {
+        "id": "69a6eb31480cc",
+        "nom": "LamineYamal",
+        "bac": 1,
+        "volume_eau": "10",
+        "nutriments": {
+            "Phosphore": "10",
+            "Azote": "10"
+        },
+        "date_creation": "2026-03-03 15:07:45",
+        "periode": "Saison en cours",
+        "description": "Volume: 10L. Elements: Phosphore, Azote"
+    }
+]

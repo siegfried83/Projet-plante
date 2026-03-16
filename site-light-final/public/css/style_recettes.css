@@ -1,0 +1,609 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    color: #333;
+}
+
+.home-link {
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.home-link:hover {
+    transform: scale(1.1);
+}
+
+.home-icon {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.header-main {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.sub-header {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.labels-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+}
+
+.dropbtn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+    transition: background 0.3s;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980b9;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.option-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.option-checkbox {
+    margin-right: 10px;
+}
+
+.percent-input {
+    width: 60px !important;
+    padding: 5px !important;
+    font-size: 14px !important;
+    margin-left: 10px;
+}
+
+#addZone {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#addZone button {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.btn-valider {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-valider:hover {
+    background: #2ecc71;
+    transform: translateY(-2px);
+}
+
+.recipes-list {
+    margin-top: 50px;
+}
+
+.recipe-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-left: 5px solid #3498db;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.history-section {
+    margin-top: 50px;
+    border-top: 2px solid #eee;
+    padding-top: 30px;
+}
+
+.history-title {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.recipe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+}
+
+.recipe-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2980b9;
+}
+
+.recipe-date {
+    font-size: 0.9em;
+    color: #95a5a6;
+    background: #f0f2f5;
+    padding: 4px 10px;
+    border-radius: 15px;
+}
+
+.nutrient-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.nutrient-tag {
+    background: #e8f6f3;
+    color: #16a085;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    border: 1px solid #a3e4d7;
+    font-weight: 500;
+}
+
+.no-recipes {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+    padding: 20px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.alert-success { background: #d4edda; color: #155724; }
+.alert-error { background: #f8d7da; color: #721c24; }
+
+/* ============================================
+   Section IA - Génération de recettes
+   ============================================ */
+
+.ai-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.ai-section .sub-header {
+    color: white;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.ai-section .sub-header i {
+    margin-right: 10px;
+}
+
+.ai-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+.ai-input-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.ai-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+}
+
+.ai-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.ai-input::placeholder {
+    color: #888;
+}
+
+.btn-ai {
+    padding: 14px 28px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-ai:hover {
+    background: #2ecc71;
+    transform: translateY(-2px);
+}
+
+.btn-ai:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.ai-loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+}
+
+.ai-loading i {
+    margin-right: 10px;
+}
+
+.ai-result {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.ai-result h4 {
+    color: #27ae60;
+    margin: 0 0 15px;
+    font-size: 1.1em;
+}
+
+.ai-result h4 i {
+    margin-right: 8px;
+}
+
+.ai-preview {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.preview-row {
+    display: flex;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.preview-row:last-child {
+    border-bottom: none;
+}
+
+.preview-label {
+    font-weight: 600;
+    color: #555;
+    min-width: 120px;
+}
+
+.preview-value {
+    color: #333;
+    flex: 1;
+}
+
+.btn-save-ai {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-save-ai:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+.btn-save-ai:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.ai-error {
+    background: rgba(231, 76, 60, 0.9);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.ai-error i {
+    margin-right: 8px;
+}
+
+.ai-success {
+    background: rgba(39, 174, 96, 0.9);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.ai-success i {
+    margin-right: 8px;
+}
+
+/* ============================================
+   Section Plante complète - 3 recettes
+   ============================================ */
+
+.plant-section {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.btn-plant {
+    background: #8e44ad;
+}
+
+.btn-plant:hover {
+    background: #9b59b6;
+}
+
+.plant-result {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.plant-result h4 {
+    color: #11998e;
+    margin: 0 0 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.plant-result h4 i {
+    margin-right: 8px;
+}
+
+#plantVarietyName {
+    color: #8e44ad;
+    font-weight: bold;
+}
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.recipe-phase {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.recipe-phase:hover {
+    transform: translateY(-5px);
+}
+
+.phase-header {
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.05em;
+}
+
+.phase-header i {
+    margin-right: 8px;
+}
+
+.germination .phase-header {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.vegetative .phase-header {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.flowering .phase-header {
+    background: linear-gradient(135deg, #fa709a, #fee140);
+}
+
+.phase-content {
+    padding: 15px;
+    background: #f8f9fa;
+}
+
+.phase-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 0.9em;
+    border-bottom: 1px solid #eee;
+}
+
+.phase-row:last-of-type {
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+.phase-row span:first-child {
+    font-weight: 600;
+    color: #555;
+}
+
+.phase-nutrients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.nutrient-badge {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.btn-save-plant {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    margin-top: 10px;
+}
+
+.btn-save-plant:hover {
+    box-shadow: 0 5px 15px rgba(17, 153, 142, 0.4);
+}

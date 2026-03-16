@@ -1,0 +1,283 @@
+ body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr; /* Colonne cuve plus large */
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: stretch; /* Étire les colonnes sur toute la hauteur */
+        }
+        
+        @media (max-width: 900px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Colonne de Gauche (Sidebar) */
+        .sidebar-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 100%;
+        }
+
+        /* Styles de la Cuve */
+        .tank-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            /* Centrage vertical du contenu */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1; /* Prend la moitié de l'espace */
+        }
+        .tank-visual {
+            width: 100px;
+            height: 180px; /* Cuve plus petite */
+            background: #e0e0e0;
+            margin: 15px auto;
+            border-radius: 0 0 50px 50px;
+            border: 4px solid #bdc3c7;
+            border-top: none;
+            position: relative;
+            overflow: hidden;
+        }
+        .water {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to bottom, #3498db, #2980b9);
+            transition: height 1s ease-in-out;
+            opacity: 0.8;
+        }
+        .water-wave {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 200%;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%233498db" opacity="0.5"/></svg>');
+            background-size: 50% 100%;
+            animation: wave 5s linear infinite;
+        }
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .tank-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2980b9;
+        }
+
+        /* Styles du panneau Énergie */
+        .energy-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+            flex: 1; /* Prend l'autre moitié de l'espace */
+        }
+        
+        .energy-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            background: rgba(255,255,255,0.4);
+            border-radius: 12px;
+        }
+        
+        .energy-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #27ae60;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            flex-shrink: 0;
+        }
+        
+        .energy-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .energy-val-big {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .energy-label {
+            font-size: 0.85em;
+            color: #7f8c8d;
+            text-transform: uppercase;
+        }
+
+        /* Styles des Bacs */
+        .bacs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .bac-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .bac-card:hover {
+            transform: translateY(-3px);
+        }
+        .bac-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .plant-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(39, 174, 96, 0.15);
+            color: #1e8449;
+            border: 1px solid rgba(39,174,96,0.35);
+            border-radius: 20px;
+            padding: 2px 9px;
+            font-size: 0.75em;
+            font-weight: 600;
+            white-space: nowrap;
+            max-width: 140px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .plant-badge-empty {
+            background: rgba(189,195,199,0.25);
+            color: #95a5a6;
+            border-color: rgba(189,195,199,0.4);
+        }
+        .bac-header {
+            background: rgba(255, 255, 255, 0.4);
+            padding: 10px 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .bac-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1em;
+        }
+        .status-dot {
+            height: 10px;
+            width: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .status-online { background-color: #2ecc71; box-shadow: 0 0 5px #2ecc71; }
+        .status-offline { background-color: #e74c3c; }
+
+        .cam-feed {
+            height: 140px;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            position: relative;
+        }
+        .cam-placeholder {
+            text-align: center;
+            color: #aaa;
+        }
+        .cam-live-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            font-size: 0.7em;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+            display: none;
+        }
+        .online .cam-live-badge { display: block; }
+        
+        .sensors-data {
+            padding: 10px 15px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .sensor-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .sensor-label { font-size: 0.7em; color: #7f8c8d; }
+        .sensor-val { font-size: 0.9em; font-weight: bold; color: #333; }
+
+        /* Ligne de seuil à 25% dans la cuve */
+        .tank-threshold {
+            position: absolute;
+            bottom: 25%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: rgba(210, 40, 40, 0.8);
+            z-index: 10;
+            pointer-events: none;
+        }
+        .tank-threshold::after {
+            content: '25 %';
+            position: absolute;
+            right: 5px;
+            top: -15px;
+            font-size: 0.6em;
+            color: #c0392b;
+            font-weight: bold;
+            letter-spacing: 0.03em;
+        }
+
+        /* Clignotement rouge vif toutes les 5 sec quand niveau sous seuil */
+        @keyframes tankLowBlink {
+            0%,  76%, 100% { background: rgba(255, 255, 255, 0.6); }
+            80%            { background: rgb(158, 11, 11); }
+            88%            { background: rgba(255, 255, 255, 0.6); }
+            92%            { background: rgb(157, 9, 9); }
+            96%            { background: rgba(255, 255, 255, 0.6); }
+        }
+        .tank-low-warning {
+            animation: tankLowBlink 2s linear infinite;
+        }
